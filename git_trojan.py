@@ -52,8 +52,8 @@ class GitImporter(object):
 
 
 def connect_to_github():
-    gh = login(username="chuckscott37@rocketmail.com",password="_r93G4sl/SI_JsA/")
-    repo = gh.repository("chuckscott37@rocketmail.com","project_one")
+    gh = login(username="chunkylover7",password="_r93G4sl/SI_JsA/")
+    repo = gh.repository("chunkylover7","project_one")
     branch = repo.branch("master")    
 
     return gh,repo,branch
