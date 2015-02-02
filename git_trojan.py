@@ -22,8 +22,7 @@ configured    = False
 class GitImporter(object):
 
     def __init__(self):
-
-        self.current_module_code = ""
+    self.current_module_code = ""
 
 
     def find_module(self,fullname,path=None):
