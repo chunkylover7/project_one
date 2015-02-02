@@ -30,7 +30,7 @@ class GitImporter(object):
         
         if configured:
             print "[*] Attempting to retrieve %s" % fullname
-            new_library = get_file_contents("~modules/%s" % fullname)
+            new_library = get_file_contents("modules/%s" % fullname)
             
             if new_library is not None:
                 self.current_module_code = base64.b64decode(new_library)
