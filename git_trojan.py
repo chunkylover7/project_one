@@ -14,7 +14,7 @@ trojan_id = "abc"
 
 trojan_config = "config/%s.json" % trojan_id
 data_path     = "data/%s/" % trojan_id
-trojan_modules= []
+trojan_modules = []
 
 task_queue    = Queue.Queue()
 configured    = False
